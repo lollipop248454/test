@@ -44,44 +44,44 @@ https://blog.csdn.net/zw0Pi8G5C1x/article/details/86486324
 
 （3）最终效果图：
 
-![img](file:///C:\TEMP\ksohtml5768\wps4.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A1aV0.png) 
 
 匹配日期格式：日期按照xxxx-xx-xx表示，将匹配条件倒置即可匹配到不合要求的日期格式，将不匹配的行删去
 
-![img](file:///C:\TEMP\ksohtml5768\wps5.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A1BPU.png) 
 
-![img](file:///C:\TEMP\ksohtml5768\wps6.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A16M9.png) 
 
  
 
 匹配性别：别只能为男或者女，将匹配条件倒置可以看见不被匹配的行的原因是性别栏为否，将不匹配的行删除。
 
-![img](file:///C:\TEMP\ksohtml5768\wps7.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A1Wa6.png) 
 
-![img](file:///C:\TEMP\ksohtml5768\wps8.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A1oxH.png) 
 
 匹配姓名：姓名只能为中文字符，通过匹配发现有1行没被匹配，倒置发现该行数据缺失，将其删除。
 
-![img](file:///C:\TEMP\ksohtml5768\wps9.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A1LZt.png) 
 
  
 
-![img](file:///C:\TEMP\ksohtml5768\wps10.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A1xJS.png) 
 
 匹配学号：基本要求是12位数字，直接用正则表达式匹配，倒置不符合要求的13位数字删除。
 
-![img](file:///C:\TEMP\ksohtml5768\wps11.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A39Mj.png) 
 
 费用的基本要求肯定是要大于等于0 的，因此用正则表达式将小于0的数字所在行删除。
 
-![img](file:///C:\TEMP\ksohtml5768\wps12.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A3PLn.png) 
 
 通过删除，最终结果是3行。
 
-![img](file:///C:\TEMP\ksohtml5768\wps13.jpg)
+![img](https://s1.ax1x.com/2020/09/27/0A3FZq.png)
 
 
 
 最后利用OpenRefine的导出功能导出自己想要的文件格式即可
 
-![image-20200927212237366](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20200927212237366.png)
+![img](https://s1.ax1x.com/2020/09/27/0A3AoV.png)
