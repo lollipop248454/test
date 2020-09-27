@@ -30,7 +30,7 @@ https://blog.csdn.net/zw0Pi8G5C1x/article/details/86486324
 
 初始数据：
 
-![img](file:///C:\TEMP\ksohtml5768\wps1.jpg) 
+![Image text](https://github.com/lollipop248454/test/blob/master/IMG/%E5%9B%BE%E7%89%871.png) 
 
 其中日期列直接用日期格式就会如上图所示添加了很多不需要的时间信息。执行以下操作变换时间格式：
 
