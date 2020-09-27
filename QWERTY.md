@@ -36,7 +36,7 @@ https://blog.csdn.net/zw0Pi8G5C1x/article/details/86486324
 
 （1）将所有列改为同一种日期格式，改完如图中绿色部分。
 
-![img](https://s1.ax1x.com/2020/09/27/0AlsBt.png) 
+![img](https://s1.ax1x.com/2020/09/27/0A33o6.png) 
 
 （2）将日期模式改为文本格式，去掉不相关的信息
 
