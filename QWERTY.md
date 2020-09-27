@@ -36,7 +36,7 @@ https://blog.csdn.net/zw0Pi8G5C1x/article/details/86486324
 
 （1）将所有列改为同一种日期格式，改完如图中绿色部分。
 
-![img](file:///C:\TEMP\ksohtml5768\wps2.jpg) 
+![img](https://github.com/lollipop248454/test/blob/master/IMG/%E5%9B%BE%E7%89%871.png) 
 
 （2）将日期模式改为文本格式，去掉不相关的信息
 
