@@ -30,17 +30,17 @@ https://blog.csdn.net/zw0Pi8G5C1x/article/details/86486324
 
 初始数据：
 
-![Image text](https://github.com/lollipop248454/test/blob/master/IMG/%E5%9B%BE%E7%89%871.png) 
+![img](https://s1.ax1x.com/2020/09/27/0AlTH0.png) 
 
 其中日期列直接用日期格式就会如上图所示添加了很多不需要的时间信息。执行以下操作变换时间格式：
 
 （1）将所有列改为同一种日期格式，改完如图中绿色部分。
 
-![img](https://github.com/lollipop248454/test/blob/master/IMG/%E5%9B%BE%E7%89%871.png) 
+![img](https://s1.ax1x.com/2020/09/27/0AlsBt.png) 
 
 （2）将日期模式改为文本格式，去掉不相关的信息
 
-![img](file:///C:\TEMP\ksohtml5768\wps3.jpg) 
+![img](https://s1.ax1x.com/2020/09/27/0A1i4O.png) 
 
 （3）最终效果图：
 
