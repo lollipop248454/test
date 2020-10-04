@@ -28,4 +28,4 @@ ER图如下：
 
 关系模型图如下：
 
-![image-20201004204614562](https://s1.ax1x.com/2020/10/04/0JP1De.png)
+![img](https://s1.ax1x.com/2020/10/04/0JP1De.png)
