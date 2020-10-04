@@ -10,7 +10,7 @@
 
 ER图如下：
 
-![image-20201004204607705](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201004204607705.png)
+![img](https://s1.ax1x.com/2020/10/04/0Jke4s.png)
 
 # 利用dbdiagram.io画出关系模型，标明主键外键
 
