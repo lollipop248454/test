@@ -20,9 +20,9 @@ Report your experimental results, especially your gains and critical thinking.
 
 
 
-![image-20201012151819943](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201012151819943.png)
+![image-20201012151819943](https://s1.ax1x.com/2020/10/12/0R8wnK.png)
 
-![image-20201012152307299](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201012152307299.png)
+![image-20201012152307299](https://s1.ax1x.com/2020/10/12/0R8oNQ.png)
 
 # 部分关键代码
 
