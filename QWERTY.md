@@ -1,111 +1,125 @@
-# 有关数据质量的讨论
+1.任务
 
-数据质量是保证数据应用的基础,它的评估标准主要包括四个方面,完整性、一致性、准确性、及时性。 评估数据是否达到预期设定的质量要求,就可以通过这四个方面来进行判断。 数据质量的四种评估标准数据质量是保证数据应用的基础，它的评估标准主要包括四个方面，完整性、一致性、准确性、及时性。
+Add a new vis function based on the open source spreadsheet codes:
 
-详情：https://wenku.baidu.com/view/458e7f3649649b6648d747f7.html#
+https://github.com/myliang/x-spreadsheet
 
-# 数据质量的重要性
+Report your experimental results, especially your gains and critical thinking.
 
-数据是连接现实世界和虚拟世界的桥梁，如果数据质量出现问题，无法反映现实世界的状况，那么建立起来的虚拟模型就会有较大的偏差，从而预测出有偏差甚至完全相反的结果，如果是一个企业对于未来市场的判断，那么这种后果将是极其严重的，传统数据的重要性不言而喻。
+# 2.实验方法与效果
 
-# 常见的数据质量问题
+首先下载开源源码到本地，然后根据index.html文件在此基础上进行添加与修改，并添加一个新的html页面vis.htm用于展示可视化结果。
 
-数据真实性
+1.利用load函数对表格中的数据进行初始化，设置大小，style以及交互式操作；
 
-数据准确性
+2.对于某一行某一列操作使用rows, cells来确定行与列，然后进行初始化数据，其中rows中的len用于初始化x-spreadsheet的行数。
 
-数据唯一性
+3.对于定义的xs变量，有许多种操作，可以利用xs.getData()获取数据，利用xs.cell-selected()来选择特定的元素。
 
-数据完整性
-
-数据一致性
-
-数据关联性
-
-数据及时性
-
-# 数据清洗工具OpenRefine
-
-OpenRefine 操作简介博客：
-
-https://blog.csdn.net/zw0Pi8G5C1x/article/details/86486324
-
-# 数据清洗过程
-
-初始数据：
-
-![img](https://s1.ax1x.com/2020/09/27/0AlTH0.png) 
-
-其中日期列直接用日期格式就会如上图所示添加了很多不需要的时间信息。执行以下操作变换时间格式：
-
-（1）将所有列改为同一种日期格式，改完如图中绿色部分。
-
-![img](https://s1.ax1x.com/2020/09/27/0A33o6.png) 
-
-（2）将日期模式改为文本格式，去掉不相关的信息
-
-![img](https://s1.ax1x.com/2020/09/27/0A1i4O.png) 
-
-（3）最终效果图：
-
-![img](https://s1.ax1x.com/2020/09/27/0A1aV0.png) 
-
-匹配日期格式：日期按照xxxx-xx-xx表示，将匹配条件倒置即可匹配到不合要求的日期格式，将格式错误的行删去。
-
-![img](https://s1.ax1x.com/2020/09/27/0A1BPU.png) 
-
-![img](https://s1.ax1x.com/2020/09/27/0A16M9.png) 
-
- 
-
-匹配性别：只能为男或者女，将匹配条件倒置可以看见不被匹配的行的原因是性别栏为否，将不匹配的行删除。
-
-![img](https://s1.ax1x.com/2020/09/27/0A1Wa6.png) 
-
-![img](https://s1.ax1x.com/2020/09/27/0A1oxH.png) 
-
-找寻缺失值，将每一列的进行空格匹配，将缺失信息的行进行删除。
-
-![img](https://s1.ax1x.com/2020/09/27/0A1LZt.png) 
-
- 
-
-![img](https://s1.ax1x.com/2020/09/27/0A1xJS.png) 
-
-匹配学号：基本要求是12位数字，直接用正则表达式匹配，倒置学号数字个数不合要求的行删去删除。
-
-![img](https://s1.ax1x.com/2020/09/27/0A39Mj.png) 
-
-费用的基本要求是大于等于0 的，因此用正则表达式将小于0的数字所在行删除。
-
-![img](https://s1.ax1x.com/2020/09/27/0A3PLn.png) 
-
-通过删除，最终结果是3行。
-
-![img](https://s1.ax1x.com/2020/09/27/0A3FZq.png)
+4.最后利用Windows中浏览器的window.localStorage来存储于获取数据，`localStorage` 中的键值对总是以字符串的形式存储，并且存储在 `localStorage` 的数据可以长期保留，直到手动删除，加上其属性属于只读，确保了数据的完整性以及正确性。
 
 
 
-最后利用OpenRefine的导出功能导出自己想要的文件格式即可
+![image-20201012151819943](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201012151819943.png)
 
-![img](https://s1.ax1x.com/2020/09/27/0A3AoV.png)
+![image-20201012152307299](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201012152307299.png)
 
-# 总结
+# 部分关键代码
 
-数据清洗主要包括：
+## index.htm
 
-1.对数据的一致性检查，通过所有数据分析出数据的统一规律，然后对个别不符合统一规律的数据进行清洗。
+数据初始化：调用rows，cells，text，进行赋初值。
 
-2.对于数据中的无效值以及缺失值的处理方法，有估算，整列删除，变量删除，成对删除。
+`      const rows = {
+        len: 80,
+        0:{
+	cells:{
+	0:{text: '10'},
+	1 : { text: '20'},
+	2:{text:'30'},
+	3:{text:'40'},
+	},
+           },
+        1:{
+	cells:{
+	0:{text: '20'},
+	1 : {text: '30'},
+	2:{text:'40'},
+	3:{text:'10'},
+	},
+           }   
+      };`      
 
-采用不同的处理方法可能对分析结果产生影响，尤其是当缺失值的出现并非随机且变量之间明显相关时。因此，在调查中应当尽量避免出现无效值和缺失值，保证数据的完整性
+数据存储至网页
 
-# 参考资料
+`window.localStorage.data = data;
+window.localStorage.r = r;
+window.localStorage.l = l;
+console.log(data,r,l);`
 
-https://www.jianshu.com/p/ed663e39abde
+## vis.htm
 
-https://wenku.baidu.com/view/458e7f3649649b6648d747f7.html#
+数据获取，其中x-spreadsheet默认分隔符为，
 
-https://blog.csdn.net/zw0Pi8G5C1x/article/details/86486324
+`var data = window.localStorage.data.split(',');
+var r = window.localStorage.r;
+var l = window.localStorage.l;
+console.log(data,r,l);`
 
+数据转化：将数据转化为列表数组，然后方便进行D3操作，进行折线图的绘制。
+
+`dd[i][j] = [j+1,data[g++]];`
+
+利用两层镶嵌循环，将列表导入数组，即x,y值
+
+然后利用D3将存储在列表数组里的数据可视化出来，部分关键代码
+
+` 
+
+        var linePath = d3.line()
+                .x(function(d){console.log(d[0]);return xScale(d[0]);})
+                .y(function(d){console.log(d[1]);return yScale(d[1]);});
+        var colors = [d3.rgb(0,0,255),d3.rgb(0,255,0),d3.rgb(255,0,0)];
+        svg.selectAll("path")
+            .data(dd)
+            .enter()
+            .append("path")
+            .attr("transform","translate(" +padding.left +","+padding.top +")")
+            .attr("d",function(d){
+            return linePath(d);
+            })
+            .attr("fill","none")
+            .attr("stroke-width",3)
+            .attr("stroke",function(d,i){
+                return colors[i];
+            });
+        svg.append("g")
+            .attr("class","axis")
+            .attr("transform","translate("+padding.right+","+(height-padding.bottom)+")")
+            .call(xAxis);`
+            svg.append("g")
+                .attr("class","axis")           .attr("transform","translate("+padding.left+","+padding.top+")")
+                .call(yAxis);
+
+# 实验收获
+
+1.了解了x-spreadsheet的一些基本操作，如何进行初始化，如何调用获取函数，如何进行页面转化，如何利用x-spreadsheet在网页上与用户进行交互式操作，如何利用浏览器将网页中的数据进行存储于获取；
+
+2.加深了D3的印象，能够更加熟练的运用D3对不同的数据类型，不同的数据格式，进行多种可视化操作；
+
+3.对js与html的编写有了更深一步的了解，增强了自己的写代码能力以及debug能力。
+
+# 批判性思考
+
+优点：
+
+x-spreadsheet是一款基于js开发的，简单的易用的在线表格插件，易于使用并且可操作性强，灵活性高，能够快速的启动，可读性强，能够立刻找到自己想要的数据信息。
+
+缺点：
+
+1.相比数据库而言需要等待的时间太长了
+
+2.无法打开较大的电子表格
+
+3.只能通过复制粘贴来进行过滤操作
 
