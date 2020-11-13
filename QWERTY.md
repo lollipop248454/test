@@ -14,14 +14,14 @@
 
 数据处理同上，逻辑回归不同调参，直接训练数据即可，解得正确率以及f1-score为
 
-![image-20201113195332529](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201113195332529.png)
+![img](https://img-blog.csdnimg.cn/20201113220035351.png#pic_center)
 
 ### 3.利用NHST进行假设检验
 
 将测试集均分为50份，分别求出50个accuracy以及f1-score，然后对他们进行假设检验，结果分别为
 
-![image-20201113200118000](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201113200118000.png)
+![img](https://img-blog.csdnimg.cn/20201113220044219.png#pic_center)
 
-![image-20201113200301018](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201113200301018.png)
+![img](https://img-blog.csdnimg.cn/20201113220051132.png#pic_center)
 
 其p值都极小，且小于0.05，可见两者的accuracy与f1-score不能认为相等，两者的分类效果有区别。相比而言KNN更好。 
