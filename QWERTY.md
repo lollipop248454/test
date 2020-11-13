@@ -8,7 +8,7 @@
 
 直接Python调库，将训练数据拆分为训练集与测试集，利用训练集对模型进行训练，利用测试集进行accuracy与f1-score的求解。通过调整KNN的邻居个数，发现4个邻居时效果最好，解得正确率以及f1-score为
 
-![image-20201113195135732](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201113195135732.png)
+![img](https://img-blog.csdnimg.cn/20201113220016317.png#pic_center)
 
 ### 2.逻辑回归
 
