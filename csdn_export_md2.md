@@ -12,7 +12,7 @@
 
 #### 2.在手机中下载AWARE并安装
 
-![image-20201123142322147](C:\Users\棒棒糖\AppData\Roaming\Typora\typora-user-images\image-20201123142322147.png)
+![image-20201123142322147](https://img-blog.csdnimg.cn/20201123142800251.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hleGlhbmdxaW4=,size_16,color_FFFFFF,t_70#pic_center)
 
 #### 3.连接aware与云服务器
 
